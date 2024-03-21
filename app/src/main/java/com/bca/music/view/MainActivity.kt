@@ -184,10 +184,11 @@ class MainActivity: AppCompatActivity(), OnSingleClickListener, View.OnClickList
                         sleep(500)
                         currentPosition = mediaPlayer.currentPosition
                         binding.seekbar.progress = currentPosition
+
+                        if (currentPosition == totalDuration) binding.seekbar.progress = 0
                     }
                     catch (e: IllegalStateException) { e.printStackTrace(); }
                 }
-                binding.seekbar.progress = 0
             }
         }
 
