@@ -20,6 +20,9 @@ import com.bca.music.listener.OnSingleClickListener
 import com.bca.music.model.Item
 import com.bca.music.util.SharedPreferences
 import com.bumptech.glide.Glide
+import com.microsoft.appcenter.AppCenter
+import com.microsoft.appcenter.analytics.Analytics
+import com.microsoft.appcenter.crashes.Crashes
 
 class MainActivity: AppCompatActivity(), OnSingleClickListener, View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
@@ -34,6 +37,7 @@ class MainActivity: AppCompatActivity(), OnSingleClickListener, View.OnClickList
 
         binding = ActivityMainBinding.inflate(layoutInflater)
 
+        AppCenter.start(application, "a46de656-ee00-49a3-9e16-b2fa2878986e", Analytics::class.java, Crashes::class.java)
         setContentView(binding.root)
         SharedPreferences.clear(this)
         search()
