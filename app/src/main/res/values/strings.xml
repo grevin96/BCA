@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BCA</string>
+    <string name="app_name">Music</string>
     <string name="search_artist">Search Artist</string>
     <string name="not_found">Your search was not found</string>
 </resources>
